@@ -1,0 +1,10 @@
+<div class="event-list">
+    <div class="event-list__header">
+        <h2 class="event-list__title">📋 Lista de Eventos</h2>
+        <button (click)="goToCreate()" class="event-list__button">Crear Evento</button>
+    </div>
+
+    <div *ngFor="let event of events" class="event-list__container">
+        <app-event-item [event]="event" (eventDeleted)="deleteEvent(event.id)"></app-event-item>
+    </div>
+</div>
