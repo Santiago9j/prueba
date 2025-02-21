@@ -1,0 +1,18 @@
+<div class="user-card">
+    <div class="user-card__header">
+        <h4>{{ user.name }}</h4>
+        <p class="user-card__username">@{{ user.username }}</p>
+    </div>
+    <div class="user-card__content">
+        <p>📧 <strong>Email:</strong> {{ user.email }}</p>
+        <p>📍 <strong>Dirección:</strong> {{ user.address.street }}, {{ user.address.city }}</p>
+        <p>📞 <strong>Tel:</strong> {{ user.phone }}</p>
+        <p>🌐 <strong>Sitio Web:</strong> 
+            <a [href]="'https://' + user.website" target="_blank" class="user-card__link">{{ user.website }}</a>
+        </p>
+    </div>
+    <div class="user-card__footer">
+        <p>🏢 {{ user.company.name }}</p>
+        <p><em>"{{ user.company.catchPhrase }}"</em></p>
+    </div>
+</div>
