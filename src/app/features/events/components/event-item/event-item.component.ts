@@ -1,10 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import { Event } from '../../models/event.model';
 import { UserUseCasesService } from 'src/app/features/users/service/user.use-cases.service';
 
 @Component({ selector: 'app-event-item', templateUrl: './event-item.component.html', styleUrls: ['./event-item.component.scss'] })
 export class EventItemComponent implements OnInit {
   @Input() event!: Event;
+  @Output() eventDeleted = new EventEmitter<number>();
+
   userFullName = 'Usuario Desconocido';
 
   constructor(private userService: UserUseCasesService) {}
@@ -23,5 +25,9 @@ export class EventItemComponent implements OnInit {
         this.userFullName = 'Desconocido';
       }
     );
+  }
+  
+  deleteEvent(): void {
+    this.eventDeleted.emit(this.event.id);
   }
 }
