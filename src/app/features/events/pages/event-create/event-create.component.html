@@ -1,0 +1,27 @@
+<form class="event-form" [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+  <div class="event-form__group">
+    <label for="eventName" class="event-form__group-label">Nombre del Evento</label>
+    <input id="eventName" formControlName="eventName" class="event-form__group-control" type="text"
+      placeholder="Ingrese el nombre del evento" />
+  </div>
+
+  <div class="event-form__group">
+    <label for="eventDate" class="event-form__group-label">Fecha del Evento</label>
+    <input id="eventDate" formControlName="eventDate" class="event-form__group-control" type="date" />
+  </div>
+
+  <div class="event-form__group">
+    <label for="eventLocation" class="event-form__group-label">Ubicación del Evento</label>
+    <input id="eventLocation" formControlName="eventLocation" class="event-form__group-control" type="text"
+      placeholder="Ingrese la ubicación del evento" />
+  </div>
+
+  <div class="event-form__group">
+    <label for="assignedUser" class="event-form__group-label">Organizador</label>
+    <select id="assignedUser" formControlName="assignedUser" class="event-form__group-select">
+      <option *ngFor="let user of users" [value]="user.id">{{ user.name }} ({{ user.username }})</option>
+    </select>
+  </div>
+
+  <button type="submit" class="event-form__button">Registrar Evento</button>
+</form>

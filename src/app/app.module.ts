@@ -9,6 +9,8 @@ import { UserCardComponent } from './features/users/components/user-card/user-ca
 import { LayoutComponent } from './layout/layout/layout.component';
 import { HeaderComponent } from './layout/components/header/header.component';
 import { FooterComponent } from './layout/components/footer/footer.component';
+import { EventCreateComponent } from './features/events/pages/event-create/event-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { FooterComponent } from './layout/components/footer/footer.component';
     UserCardComponent,
     LayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    EventCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

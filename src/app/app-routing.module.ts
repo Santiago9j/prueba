@@ -4,7 +4,8 @@ import { UserListComponent } from './features/users/pages/user-list/user-list.co
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
-  { path: 'users', component: UserListComponent}
+  { path: 'users', component: UserListComponent},
+  { path: 'events', loadChildren: () => import('./features/events/event.module').then(m => m.EventModule) }
 ];
 
 
