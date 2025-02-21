@@ -41,6 +41,8 @@ export class EventCreateComponent implements OnInit {
     if (this.eventForm.valid) {
       this.eventService.createEvent(this.eventForm.value);
       this.router.navigate(['/events/list']);
+    } else {
+      alert("Todos los campos son requeridos");
     }
   }
 
