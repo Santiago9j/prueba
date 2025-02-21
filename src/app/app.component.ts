@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserListComponent } from './features/users/pages/user-list/user-list.component';
 
 @Component({
   selector: 'app-root',
