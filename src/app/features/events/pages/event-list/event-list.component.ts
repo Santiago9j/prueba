@@ -25,4 +25,9 @@ export class EventListComponent implements OnInit {
   goToCreate(): void {
     this.router.navigate(['/events/create']);
   }
+
+  deleteEvent(id: number): void {
+    this.eventService.deleteEvent(id);
+    this.getAllEvents();
+  }
 }

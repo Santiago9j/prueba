@@ -5,6 +5,6 @@
     </div>
 
     <div *ngFor="let event of events" class="event-list__container">
-        <app-event-item [event]="event"></app-event-item>
+        <app-event-item [event]="event" (eventDeleted)="deleteEvent(event.id)"></app-event-item>
     </div>
 </div>

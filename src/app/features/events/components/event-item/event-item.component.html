@@ -3,7 +3,10 @@
     <p class="event-item__details"><strong>📅 Fecha:</strong> {{ event.eventDate }}</p>
     <p class="event-item__details"><strong>📍 Ubicación:</strong> {{ event.eventLocation }}</p>
     <p class="event-item__details"><strong>👤 Usuario Asignado:</strong> {{ userFullName }}</p>
-  
+
+    <div class="event-item__buttons">
+        <button (click)="deleteEvent()" class="event-item__button event-item__button--delete">Eliminar</button>
+    </div>
 </div>
   
   
