@@ -11,6 +11,8 @@ import { HeaderComponent } from './layout/components/header/header.component';
 import { FooterComponent } from './layout/components/footer/footer.component';
 import { EventCreateComponent } from './features/events/pages/event-create/event-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EventListComponent } from './features/events/pages/event-list/event-list.component';
+import { EventItemComponent } from './features/events/components/event-item/event-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
-    EventCreateComponent
+    EventCreateComponent,
+    EventListComponent,
+    EventItemComponent
   ],
   imports: [
     BrowserModule,
