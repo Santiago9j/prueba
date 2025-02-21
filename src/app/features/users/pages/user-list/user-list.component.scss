@@ -1,0 +1,51 @@
+.user-list {
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+
+  &__title {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #007bff;
+  }
+
+  &__message {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 2em 0;
+
+    &--loading {
+      color: #007bff;
+    }
+
+    &--error {
+      color: #dc3545;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 3px solid rgba(0, 123, 255, 0.3);
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 5px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
