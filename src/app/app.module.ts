@@ -13,6 +13,7 @@ import { EventCreateComponent } from './features/events/pages/event-create/event
 import { ReactiveFormsModule } from '@angular/forms';
 import { EventListComponent } from './features/events/pages/event-list/event-list.component';
 import { EventItemComponent } from './features/events/components/event-item/event-item.component';
+import { TitleComponent } from './common/title/title.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EventItemComponent } from './features/events/components/event-item/even
     FooterComponent,
     EventCreateComponent,
     EventListComponent,
-    EventItemComponent
+    EventItemComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
